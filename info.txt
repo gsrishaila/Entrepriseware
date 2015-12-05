@@ -1,6 +1,6 @@
 //info on how to use git
 //info on dynamically adding in elements to the form
-
+http://gitbyexample.org/
 //the login page
 //index.php
 <!DOCTYPE HTML>
