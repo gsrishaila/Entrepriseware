@@ -13,7 +13,7 @@
 <link href="loginsuccess.css" rel="stylesheet">
 <TITLE>Dynamically add Textbox, Radio, Button in html Form using JavaScript</TITLE>
 <SCRIPT language="javascript">
-function add(type) {
+function add(type,elementLabel) {
 
 	//Create an input type dynamically.
 	var element = document.createElement("input");
@@ -22,12 +22,20 @@ function add(type) {
 	element.setAttribute("type", type);
 	element.setAttribute("value", type);
 	element.setAttribute("name", type);
-
-
-	var foo = document.getElementById("fooBar");
+    //added
+    element.setAttribute("id", type);
+    //aded
+	var getEle = document.getElementById("mainDiv");
+    //added
 
 	//Append the element in page (in span).
-	foo.appendChild(element);
+    //added
+    var newlabel = document.createElement("Label");
+    newlabel.setAttribute("for",type);
+    newlabel.innerHTML = elementLabel;
+    getEle.appendChild(newlabel);
+    //added
+	getEle.appendChild(element);
 
 }
 </SCRIPT>
@@ -44,12 +52,13 @@ Select the element and hit Add to add it in form.
 	<OPTION value="radio">Radio</OPTION>
 </SELECT>
 
-<INPUT type="button" value="Add" onclick="add(document.forms[0].element.value)"/>
+<INPUT type="button" value="Add" onclick="add(document.forms[0].element.value,document.forms[0].ElementName.value)"/>
+<div id="page-wrap">
+	
+	<div id="mainDiv">
 
-<div id="fooBar">
-
+	</div>
 </div>
-
 </FORM>
 </BODY>
 </HTML>

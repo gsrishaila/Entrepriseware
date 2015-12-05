@@ -1,4 +1,18 @@
-#fooBar
+#page-wrap
 {
-	background-color: blue;
+	width:800px;
+	margin:0 auto;
 }
+
+#mainDiv
+{
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 600px;
+    height: 400px;
+	background-color:#CCFFFF;
+}
+
+
+
