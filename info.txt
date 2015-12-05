@@ -1,3 +1,4 @@
+//info on how to use git
 //info on dynamically adding in elements to the form
 
 //the login page
